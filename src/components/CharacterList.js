@@ -6,9 +6,8 @@ import CharacterCard from "./CharacterCard"
 import {Name} from "./Styles"
 
 export default function CharacterList(props) {
-  // const {chars, setChars} = props
+  const {chars, setChars} = props
   const [search, setSearch] = useState('')
-  const [chars, setChars] = useState([])
   const handleChange = event=> {
     const {value} = event.target
     setSearch(value)
@@ -27,6 +26,7 @@ export default function CharacterList(props) {
         const charArray = res.data.results
         setChars(charArray)
       })
+      .catch(err=>console.log(err))
   }, [])
   return (
     <section className="character-list">

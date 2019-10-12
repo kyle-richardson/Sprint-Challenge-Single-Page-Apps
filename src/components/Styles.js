@@ -33,4 +33,5 @@ export const Name = styled.div`
     width: 150px;
     margin: 3px;
     padding: 5px;
+    background-color: rgb(136, 136, 247);
 `

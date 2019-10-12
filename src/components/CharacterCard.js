@@ -7,7 +7,7 @@ export default function CharacterCard(props) {
   const id = props.props.match.params.id;
 
   useEffect(() => { 
-    setCharacter(props.chars.find(person=> `${person.id}`===id))
+    props.chars && setCharacter(props.chars.find(person=> `${person.id}`===id))
 
   },[props.chars, id]);
 
@@ -16,7 +16,9 @@ export default function CharacterCard(props) {
     character ? 
     <Card>
       <h2>{character.name}</h2>
-      <img src={character.image}/>
+      <img src={character.image} alt={character.name}/>
+      <p>Species: {character.species}</p>
+      <p>Status: {character.status}</p>
     </Card> 
     : null
   )

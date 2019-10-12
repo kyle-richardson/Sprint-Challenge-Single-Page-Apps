@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: It speeds up the client side of navigating around the app, removing the necessity of constantly sending packets of info to and from servers to navigate and progress around the app.
 
 ## Project Set Up
 
