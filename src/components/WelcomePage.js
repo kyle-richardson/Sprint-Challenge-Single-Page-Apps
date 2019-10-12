@@ -1,6 +1,19 @@
 import React from "react";
+import styled from "styled-components"
+import {Link} from "react-router-dom"
 
 export default function WelcomePage() {
+  const Button = styled.div`
+    border: 0;
+    background: gray;
+    &:hover {
+      background: lightgray;
+    }
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+  `
   return (
     <section className="welcome-page">
       <header>
@@ -10,6 +23,9 @@ export default function WelcomePage() {
           src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
           alt="rick"
         />
+        <Link to="/characters">
+          <Button>Enter!</Button>
+        </Link>
       </header>
     </section>
   );
