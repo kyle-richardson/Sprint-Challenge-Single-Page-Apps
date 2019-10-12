@@ -33,5 +33,8 @@ export const Name = styled.div`
     width: 150px;
     margin: 3px;
     padding: 5px;
-    background-color: rgb(136, 136, 247);
+    background-color: rgb(136, 166, 247);
+    &:hover {
+        background-color: rgb(86, 125, 231);
+    }
 `

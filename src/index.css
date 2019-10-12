@@ -19,9 +19,9 @@ a {
   color: black;
 
 }
-a:hover {
+/* a:hover {
   color: rgb(55, 70, 207);
-}
+} */
 p {
   margin: 5px;
 }
@@ -62,5 +62,21 @@ header h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: rgb(136, 136, 247); */
+  background-color: rgb(86, 125, 231);
+}
+
+.search-box {
+  padding: 10px;
+  border: 0;
+  background-color: rgb(224, 224, 224);
+
+}
+.search-button {
+  padding: 10px;
+  border: 0;
+  background-color: rgb(240, 186, 37);
+  cursor: pointer;
+}
+.search-button:hover {
+  background-color: rgb(194, 153, 41);
 }
