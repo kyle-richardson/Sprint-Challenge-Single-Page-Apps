@@ -14,6 +14,17 @@ main {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
+a {
+  text-decoration: none;
+  color: black;
+
+}
+/* a:hover {
+  color: rgb(55, 70, 207);
+} */
+p {
+  margin: 5px;
+}
 .grid-view {
   display: flex;
   flex-wrap: wrap;
@@ -27,13 +38,48 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
+
 .main-img {
   display: block;
   border-radius: 100%;
   margin: 0 auto;
-} */
+}
 
 header h1 {
   text-align: center;
+  margin: 0;
+}
+
+.welcome-page {
+  text-align: center;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+.character-list, .location-list {
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: rgb(86, 125, 231); */
+}
+
+.search-box {
+  padding: 10px;
+  border: 0;
+  background-color: rgb(224, 224, 224);
+
+}
+.search-button {
+  padding: 10px;
+  border: 0;
+  background-color: rgb(240, 186, 37);
+  cursor: pointer;
+}
+.search-button:hover {
+  background-color: rgb(194, 153, 41);
+}
+.hide {
+  display: none;
 }
