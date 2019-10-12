@@ -10,7 +10,6 @@ export default function LocationsList(props) {
         Axios
           .get(`https://rickandmortyapi.com/api/location/`)
           .then(res=> {
-            console.log(res.data.results)
             const locArray = res.data.results
             setLocs(locArray)
           })

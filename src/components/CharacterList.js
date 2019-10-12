@@ -3,11 +3,13 @@ import {Link, Route} from "react-router-dom"
 import SearchForm from "./SearchForm"
 import Axios from "axios"
 import CharacterCard from "./CharacterCard"
-import {Name} from "./Styles"
+import {Name, Div} from "./Styles"
 
 export default function CharacterList(props) {
   const {chars, setChars} = props
   const [search, setSearch] = useState('')
+  const [nextPage, setNextPage] = useState("https://rickandmortyapi.com/api/character/")
+  const [fullObj, setFullObj] = useState({})
   const handleChange = event=> {
     const {value} = event.target
     setSearch(value)
@@ -20,14 +22,17 @@ export default function CharacterList(props) {
   
   useEffect(()=> {
     Axios
-      .get(`https://rickandmortyapi.com/api/character/`)
+      .get(nextPage)
       .then(res=> {
-        console.log(res.data.results)
+        console.log(res)
         const charArray = res.data.results
+        setFullObj(res.data.info)
         setChars(charArray)
       })
       .catch(err=>console.log(err))
-  }, [])
+      // return setNextPage("https://rickandmortyapi.com/api/character/")
+  }, [nextPage])
+  
   return (
     <section className="character-list">
       <SearchForm 
@@ -36,6 +41,12 @@ export default function CharacterList(props) {
         handleSubmit={handleSubmit}
       />
       <h2>Character List</h2>
+      <Div className={`${!fullObj.prev ? 'hide' : null}`}onClick={()=> {
+        setNextPage(fullObj.prev)
+      }}>Prev Page</Div>
+      <Div className={`${!fullObj.next ? 'hide' : null}`}onClick={()=> {
+        setNextPage(fullObj.next)
+      }}>Next Page</Div>
       {chars.map(person=> {
         return (
           <Link key={person.id} to={`/characters/${person.id}`}>

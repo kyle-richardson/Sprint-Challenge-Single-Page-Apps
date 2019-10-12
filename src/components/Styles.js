@@ -2,15 +2,14 @@ import styled from "styled-components"
 
 export const Button = styled.div`
     border: 0;
-    background: gray;
+    background: lightgray;
     &:hover {
-        background: lightgray;
+        background: gray;
     }
     width: 100px;
     padding: 7px;
     cursor: pointer;
     text-align: center;
-    border-radius: 8px;
     margin: 10px;
 `
 
@@ -37,4 +36,17 @@ export const Name = styled.div`
     &:hover {
         background-color: rgb(86, 125, 231);
     }
+`
+
+export const Div = styled.div`
+    font-style: italic;
+    border: 1px solid black;
+    width: 75px;
+    margin: 3px;
+    padding: 5px;
+    background-color: rgb(240, 186, 37);
+    &:hover {
+        background-color: rgb(194, 153, 41);
+    }
+    cursor: pointer;
 `
