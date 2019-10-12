@@ -4,7 +4,7 @@ export const Button = styled.div`
     border: 0;
     background: gray;
     &:hover {
-    background: lightgray;
+        background: lightgray;
     }
     width: 100px;
     padding: 7px;
@@ -31,4 +31,6 @@ export const Name = styled.div`
     font-style: italic;
     border: 1px solid black;
     width: 150px;
+    margin: 3px;
+    padding: 5px;
 `
